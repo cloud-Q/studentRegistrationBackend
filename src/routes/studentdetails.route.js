@@ -52,7 +52,7 @@ router.get('/stdverification', async (req, res) => {
                 email: student.email,
                 phone: student.phone,
                 college: student.college,
-                imageUrl: student.profilePhoto ? `http://localhost:8000/${student.profilePhoto}` : null
+                imageUrl: student.profilePhoto ? `https://studentregistrationbackend.onrender.com/${student.profilePhoto}` : null
             };
 
             res.json({ accountInfo });
