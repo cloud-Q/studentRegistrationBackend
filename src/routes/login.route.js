@@ -1,10 +1,13 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 import { Student } from "../models/student.model.js";
+import cors from "cors";
 
 
 const router = express.Router();
 
+const app = express();
+app.use(cors());
 
 router.post('/login', async (req, res)=>{
     console.log(req.body);
