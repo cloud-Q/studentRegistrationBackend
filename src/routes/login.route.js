@@ -11,14 +11,11 @@ app.use(cors());
 
 router.post('/login', async (req, res)=>{
     console.log(req.body);
-    const {email} = req.body;
 
     try{
         console.log("Request Body:", req.body); // ✅ Debugging log
 
-    if (!req.body || !req.body.email) {
-        return res.status(400).json({ success: false, error: "Email is required" });
-    }
+ 
 
     const { email } = req.body;
         const existingStudent = await Student.findOne({ email });
