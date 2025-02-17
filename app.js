@@ -13,7 +13,12 @@ const __dirname = path.dirname(__filename);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use(express.json());
-app.use(cors())
+// app.use(cors())
+app.use(cors({
+    origin: ["http://localhost:3000", "https://your-frontend-deployment-url.com"], // Change this!
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 import registrationRoutes from "./src/routes/registration.route.js";
 import loginRoutes from './src/routes/login.route.js';
