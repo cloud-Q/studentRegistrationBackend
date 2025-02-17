@@ -3,6 +3,13 @@ import { Router } from "express";
 import { Student } from "../models/student.model.js";
 import jwt from "jsonwebtoken";
 
+import cors from "cors";
+
+
+
+const app = express();
+app.use(cors());
+
 
 // import path from "path";
 // import { fileURLToPath } from "url";
