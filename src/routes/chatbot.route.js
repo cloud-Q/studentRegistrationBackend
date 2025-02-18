@@ -27,7 +27,7 @@ const preWrittenMessage = [
 // Initialize Socket.IO
 const io = new Server(server,{
     cors:{
-        origin: ["http://localhost:3000", "https://your-frontend-deployment-url.com"],
+        origin: ["http://localhost:3000", "https://student-registration-frontend.vercel.app"],
         methods: ['Get', "Post"]
     }
 })
