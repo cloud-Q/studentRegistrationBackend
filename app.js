@@ -24,11 +24,13 @@ import registrationRoutes from "./src/routes/registration.route.js";
 import loginRoutes from './src/routes/login.route.js';
 import studentDetailsRouter from './src/routes/studentdetails.route.js'
 // import imageApi from './src/utils/images.js'
+import chatingRoute from './src/routes/chatbot.route.js'
 
 app.use('/', registrationRoutes);
 app.use('/', loginRoutes);
 app.use('/', studentDetailsRouter);
 // app.use('/', imageApi);
+app.use('/',chatingRoute);
 
 
 
